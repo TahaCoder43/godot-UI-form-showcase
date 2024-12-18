@@ -1,0 +1,250 @@
+[gd_scene load_steps=22 format=3 uid="uid://cyyllsl5ao3r2"]
+
+[ext_resource type="Theme" uid="uid://b5036om8sd0ca" path="res://app.theme" id="1_23nyr"]
+[ext_resource type="Texture2D" uid="uid://bqps2i8x1hpey" path="res://akar-icons--arrow-back-thick-fill.svg" id="1_lluc2"]
+[ext_resource type="Texture2D" uid="uid://bk7yr4bbnhogb" path="res://logo.png" id="1_pj7ck"]
+[ext_resource type="StyleBox" uid="uid://c0ndb2ubpa53f" path="res://input.stylebox" id="2_hxvvu"]
+[ext_resource type="Texture2D" uid="uid://onlw6gqpy0py" path="res://lineedit-icons/carbon--user-profile.svg" id="2_wqx6x"]
+[ext_resource type="Texture2D" uid="uid://d1q8njcvlgigb" path="res://lineedit-icons/maki--city.svg" id="3_cqttx"]
+[ext_resource type="Texture2D" uid="uid://dng174m4xvnnp" path="res://bx--mail-send.svg" id="3_mjmy7"]
+[ext_resource type="Texture2D" uid="uid://dqyh7ug30upuo" path="res://lineedit-icons/tabler--gender-male.svg" id="4_nctvt"]
+[ext_resource type="Texture2D" uid="uid://dixnvax0t21es" path="res://lineedit-icons/uil--kid.svg" id="5_ma02l"]
+[ext_resource type="Texture2D" uid="uid://cl7b7w7h8jgya" path="res://lineedit-icons/dashicons--email.svg" id="7_4kgjs"]
+[ext_resource type="Texture2D" uid="uid://b10525mv0rvju" path="res://large-logo.png" id="11_iglqt"]
+[ext_resource type="Texture2D" uid="uid://ccb08tmk1qhxe" path="res://socials/ri--instagram-fill.svg" id="12_u3ruw"]
+[ext_resource type="Texture2D" uid="uid://mcgo11iltoh5" path="res://socials/mingcute--whatsapp-fill.svg" id="13_bhh3d"]
+[ext_resource type="Texture2D" uid="uid://dyhic3fvdy48j" path="res://socials/uil--linkedin.svg" id="14_fmmka"]
+[ext_resource type="Texture2D" uid="uid://clj71ensilaqt" path="res://socials/ic--round-facebook.svg" id="15_7pjya"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y1cni"]
+bg_color = Color(0.90732, 0.833643, 0.763944, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3opos"]
+bg_color = Color(0.85, 0.70125, 0.5525, 1)
+shadow_color = Color(0, 0, 0, 0.2)
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="SystemFont" id="SystemFont_npnmb"]
+font_names = PackedStringArray("Poppins")
+font_weight = 700
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_md81l"]
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="SystemFont" id="SystemFont_4jfn8"]
+font_names = PackedStringArray("Poppins")
+font_weight = 800
+
+[sub_resource type="LabelSettings" id="LabelSettings_0vkxj"]
+line_spacing = -20.0
+font = SubResource("SystemFont_4jfn8")
+font_size = 100
+font_color = Color(0, 0, 0, 0.878431)
+
+[node name="Control" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_y1cni")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3opos")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/PanelContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 72)
+layout_mode = 2
+
+[node name="goback" type="Button" parent="PanelContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.164706, 0.121569, 0.0745098, 1)
+theme_override_fonts/font = SubResource("SystemFont_npnmb")
+theme_override_font_sizes/font_size = 30
+text = " Back"
+icon = ExtResource("1_lluc2")
+flat = true
+
+[node name="logo" type="Button" parent="PanelContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2"]
+clip_contents = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_md81l")
+icon = ExtResource("1_pj7ck")
+flat = true
+expand_icon = true
+
+[node name="spacing" type="Label" parent="PanelContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(143, 0)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+
+[node name="forum" type="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/forum"]
+layout_mode = 2
+text = "BECOME AN
+EARLY TESTER"
+label_settings = SubResource("LabelSettings_0vkxj")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/forum"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/forum/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/forum/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="firstname" type="LineEdit" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/forum/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_23nyr")
+placeholder_text = "First Name"
+right_icon = ExtResource("2_wqx6x")
+
+[node name="lastname" type="LineEdit" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/forum/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_23nyr")
+placeholder_text = "Last Name"
+right_icon = ExtResource("2_wqx6x")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/forum/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="city" type="LineEdit" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/forum/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_23nyr")
+placeholder_text = "City"
+right_icon = ExtResource("3_cqttx")
+
+[node name="gender" type="LineEdit" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/forum/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_23nyr")
+placeholder_text = "Gender"
+right_icon = ExtResource("4_nctvt")
+
+[node name="age" type="LineEdit" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/forum/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_23nyr")
+placeholder_text = "Age"
+right_icon = ExtResource("5_ma02l")
+
+[node name="email" type="LineEdit" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/forum/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_23nyr")
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.27451)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("2_hxvvu")
+placeholder_text = "Email"
+right_icon = ExtResource("7_4kgjs")
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/forum"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme = ExtResource("1_23nyr")
+text = "Send"
+icon = ExtResource("3_mjmy7")
+icon_alignment = 2
+expand_icon = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 80
+
+[node name="info-socials" type="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer2/info-socials"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("11_iglqt")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer2/info-socials"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0.462745)
+theme_override_font_sizes/font_size = 20
+text = "ClothCanvas Registered inc Trademarked"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer2/info-socials"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer2/info-socials/HBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 2
+texture = ExtResource("12_u3ruw")
+
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer2/info-socials/HBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 2
+texture = ExtResource("13_bhh3d")
+
+[node name="TextureRect3" type="TextureRect" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer2/info-socials/HBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 2
+texture = ExtResource("14_fmmka")
+
+[node name="TextureRect4" type="TextureRect" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer2/info-socials/HBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 2
+texture = ExtResource("15_7pjya")
